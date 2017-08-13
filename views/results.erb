@@ -1,0 +1,15 @@
+<h1>
+<%=firstname%> <%=lastname%> Here is the randomly generated list you requested.
+</h1>
+
+
+
+
+
+<center>
+<form method="post" action="results">
+	<input type="hidden" name="firstname" value="<%=firstname%>">
+	<input type="hidden" name="lastname" value="<%=lastname%>">
+	<input type="submit" value="redo">
+</form>
+</center>
