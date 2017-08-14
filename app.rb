@@ -1,5 +1,6 @@
 require "sinatra"
 require_relative "random_pair.rb"
+enable :sessions
 
 get '/' do
 	message = params[:message]
@@ -42,39 +43,28 @@ get '/names' do
 end
 
 post '/names' do
-	firstname = params[:firstname]
-	lastname = params[:lastname]
+	session[:firstname] = params[:firstname]
+	session[:lastname] = params[:lastname]
 	success = params[:success]
-	redirect '/randnames?firstname=' + firstname + "&lastname=" + lastname
+	redirect "/randnames?"
 end
 
 get '/randnames' do
-	firstname = params[:firstname]
-	lastname = params[:lastname]
-	erb :randnames, locals:{firstname: firstname, lastname: lastname}
+	erb :randnames
 end
 
 post '/randnames' do
-	firstname = params[:firstname]
-	lastname = params[:lastname]
 	rando = params.values
-	p "rando here#{rando}"
 	randfunc = random_pair(rando)
-	p "randfunc is here#{randfunc}"
 	strng = stringer(randfunc)
-	p "string is here #{strng}"
-	redirect '/results?firstname=' + firstname + "&lastname=" + lastname + "&strng=" + strng
+	redirect "/results?&strng=" + strng
 end
 
 get '/results' do
-	firstname = params[:firstname]
-	lastname = params[:lastname]
 	strng = params[:strng]
-	erb :results, locals:{firstname: firstname, lastname: lastname}
+	erb :results, locals:{firstname:session[:firstname], lastname:session[:lastname], strng: strng}
 end
 
 post '/results' do
-	firstname = params[:firstname]
-	lastname = params[:lastname]
-	redirect '/randnames?firstname=' + firstname + "&lastname=" + lastname
+	redirect '/randnames?'
 end

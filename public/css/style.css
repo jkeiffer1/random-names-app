@@ -1,0 +1,170 @@
+.color{
+	color: white;
+	background-color: black;
+    text-decoration: none;
+}
+.size{
+	font-size: 12vh;
+}
+
+.center{
+	text-align: center;
+}
+
+.left{
+	text-align: left;
+}
+.right{
+	text-align: right;
+}
+
+#Bravo{
+	background-image: url(/image/jbravo.jpeg);
+	background: contain;
+	background-size: cover;
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	text-align: center;
+	margin: 0;
+
+}
+
+#tribaldragon{
+	background-image: url(/image/tribaldragon.jpeg);
+	background-color: grey;
+	color: white;
+	background: contain;
+	background-size:35%;
+	background-repeat:no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	text-align: center;
+	margin: 0;
+}
+
+#duhragon{
+	background-image: url(/image/animateddragon.gif);
+	background-color: black;
+	color: white;
+	background: contain;
+	background-size:45%;
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	text-align: center;
+	margin: 0;
+}
+#bacon{
+	background-image: url(/image/foodbulletfive.jpeg);
+	background: contain;
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	text-align: center;
+	margin: 0;
+}
+header{
+	text-align: center;
+	font-size: 500%;
+	border-style: groove;
+	border-color:white;
+	clear: right;
+}
+
+ul{
+	color: white;
+	margin:0;
+	padding:0;
+	border-style:groove;
+	border-top-style:none;
+	border-color:gray;
+	font-size:3vh;
+	text-align: center;
+}
+
+li {
+	display:inline;
+	border-left-style:solid;
+	border-color:white;
+}
+
+li a {
+	color:white;
+   	padding:0;
+   	margin:0;
+}
+
+li a:hover{
+	color: black;
+	background-color:white;
+	opacity:0.5;
+}
+
+body{
+	background: contain;
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	text-align: center;
+	margin: 0;
+}
+/*
+#names_page{
+	position:absolute;
+	text-shadow: -5px 0px 10px crimson;
+	font-size: 5vh;
+	top:25%;
+	left:0;
+	height:50%;
+	width: 50%;
+}
+#input_page{
+	text-shadow: -5px 0px 10px crimson;
+	font-size: 4vh;
+	position:absolute;
+	top:25%;
+	left:0;
+	height:50%;
+	width: 50%;
+}
+
+#that_one_line{
+	font-size: 5vh;
+	text-align:center;
+	color:black;
+	text-shadow: -5px 0px 10px crimson;
+	float:center;
+	position:absolute;
+	top:25%;
+	left:50%;
+
+}
+
+#results_name{
+	font-size: 5vh;
+	text-align:center;
+	color:black;
+	text-shadow: -5px 0px 10px crimson;
+	border-style:dashed;
+	border-color:gray;
+	background-color:rgba(128,128,128,0.5);
+	float:left;
+	position:absolute;
+	top:35%;
+	left:50%;
+
+}*/
+
+footer{
+	color: white;
+	position: fixed;
+	bottom: 0;
+	border: groove;
+	border-color: white;
+	border-bottom-style: none
+	border-width: 2rem;
+	height: 5%;
+	width: 100%;
+	margin-top: 10%;
+	background-color: black;
+	opacity: 50%
+}

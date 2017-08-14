@@ -1,26 +1,22 @@
  def random_pair(names)
  	array = names.shuffle.each_slice(2).to_a
- 	x = array.length - 1
  	if names.length % 2 == 0
- 		array.length
+ 		p array
  	else
- 		array[0] << array[x]
- 		array.pop
- 		array[0].flatten!
-
- 	end
- 	p "#{array}"
+ 		array[array.length - 2] << array[array.length - 1]
+ 		array[array.length - 2].flatten!
+ 		array.slice!(array.length - 1)
  	p array
-
- end
+ 	end
+end
 
  def stringer(string)
  	heresstring = ""
  	string.each do |lilarray|
  		if lilarray.length == 3
- 			x = "#{lilarray[0]} and #{lilarray[1]} and #{lilarray[2]}"
+ 			x = "#{lilarray[0]} and #{lilarray[1]} and #{lilarray[2]}" + "<br>"
  		else
- 			x = "#{lilarray[0]} and #{lilarray[1]}"
+ 			x = "#{lilarray[0]} and #{lilarray[1]}" + "<br>"
  		end
  		heresstring << x
  	end
