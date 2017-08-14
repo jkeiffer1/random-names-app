@@ -107,52 +107,7 @@ body{
 	text-align: center;
 	margin: 0;
 }
-/*
-#names_page{
-	position:absolute;
-	text-shadow: -5px 0px 10px crimson;
-	font-size: 5vh;
-	top:25%;
-	left:0;
-	height:50%;
-	width: 50%;
-}
-#input_page{
-	text-shadow: -5px 0px 10px crimson;
-	font-size: 4vh;
-	position:absolute;
-	top:25%;
-	left:0;
-	height:50%;
-	width: 50%;
-}
 
-#that_one_line{
-	font-size: 5vh;
-	text-align:center;
-	color:black;
-	text-shadow: -5px 0px 10px crimson;
-	float:center;
-	position:absolute;
-	top:25%;
-	left:50%;
-
-}
-
-#results_name{
-	font-size: 5vh;
-	text-align:center;
-	color:black;
-	text-shadow: -5px 0px 10px crimson;
-	border-style:dashed;
-	border-color:gray;
-	background-color:rgba(128,128,128,0.5);
-	float:left;
-	position:absolute;
-	top:35%;
-	left:50%;
-
-}*/
 
 footer{
 	color: white;
