@@ -1,7 +1,7 @@
 <center><h1>
 <%=firstname.capitalize%> <%=lastname.capitalize%> Here is the randomly generated list you requested.<br>
 
-
+<%=final%>
 </h1></center>
 
 
@@ -9,9 +9,6 @@
 
 <center>
 <h1><form method="post" action="results">
-<%strng.each do |x| %>
-		<input type="checkbox" name = "checked[]" value= "<%=x%>"> <%=x%><br>
-<%end%>
 	
 	<input type="submit" value="redo">
 </form></h1>

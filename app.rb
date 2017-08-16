@@ -54,17 +54,33 @@ get '/randnames' do
 end
 
 post '/randnames' do
-	rando = params.values
-	randfunc = random_pair(rando)
-	strng = stringer(randfunc)
-	redirect "/results?&strng=" + strng
+	rando = params[:input]
+	capital = caps(rando)
+	randfunc = random_pair(capital)
+	session[:strng] = stringer(randfunc)
+	
+
+	
+
+	redirect "/results"
 end
 
 get '/results' do
-	strng = params[:strng]
-	erb :results, locals:{firstname:session[:firstname], lastname:session[:lastname], strng: strng}
+	erb :results, locals:{firstname:session[:firstname], lastname:session[:lastname], strng:session[:strng]}
 end
 
 post '/results' do
-	redirect '/randnames?'
+	x = params[:checked]
+	final = restring(x)
+	redirect "/finalcut?final=" + final
+end
+
+get '/finalcut' do
+	final = params[:final]
+	erb :finalcut, locals:{firstname:session[:firstname], lastname:session[:lastname], final: final}
+end
+
+post '/finalcut' do
+	final = params[:final]
+	redirect "/randnames"
 end

@@ -1,17 +1,20 @@
  def random_pair(names)
  	array = names.shuffle.each_slice(2).to_a
  	if names.length % 2 == 0
- 		p array
+ 		array
  	else
  		array[array.length - 2] << array[array.length - 1]
  		array[array.length - 2].flatten!
  		array.slice!(array.length - 1)
- 	p array
+ 	array
  	end
-end
+ 	thearray = array
+ 	thearray
+ end
+
 
  def stringer(string)
- 	heresstring = ""
+ 	heresstring = []
  	string.each do |lilarray|
  		if lilarray.length == 3
  			x = "#{lilarray[0]} and #{lilarray[1]} and #{lilarray[2]}" + "<br>"
@@ -21,6 +24,25 @@ end
  		heresstring << x
  	end
  	heresstring
+ end
+
+ def restring(arr)
+ 	emptystr = ""
+ 	arr.each do |value|
+ 		emptystr << value
+ 	end
+ 	emptystr
+ end
+ 
+ 
+
+ def caps(lownames)
+ 	makecaps = []
+ 	lownames.each do |names|
+ 		x = names.capitalize
+ 		makecaps << x
+ 	end
+ 	makecaps
  end
 
 #  def random_pair_no_slice(name_arr)
