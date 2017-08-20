@@ -23,11 +23,11 @@
 	background: contain;
 	background-size: cover;
 	background-repeat:no-repeat;
-	background-attachment: fixed;
 	text-align: center;
 	margin: 0;
 
 }
+
 
 #tribaldragon{
 	background-image: url(/image/tribaldragon.jpeg);
@@ -48,8 +48,8 @@
 	color: white;
 	background: contain;
 	background-size:45%;
+	background-position: center-left;
 	background-repeat:no-repeat;
-	background-attachment: fixed;
 	text-align: center;
 	margin: 0;
 }
@@ -100,10 +100,11 @@ li a:hover{
 }
 
 body{
+	height: 100%;
+	width: 100%;
 	background: contain;
 	background-size:cover;
 	background-repeat:no-repeat;
-	background-attachment: fixed;
 	text-align: center;
 	margin: 0;
 }

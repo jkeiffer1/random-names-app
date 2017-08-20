@@ -58,10 +58,6 @@ post '/randnames' do
 	capital = caps(rando)
 	randfunc = random_pair(capital)
 	session[:strng] = stringer(randfunc)
-	
-
-	
-
 	redirect "/results"
 end
 
@@ -82,5 +78,5 @@ end
 
 post '/finalcut' do
 	final = params[:final]
-	redirect "/randnames"
+	redirect "/randnames?"
 end
